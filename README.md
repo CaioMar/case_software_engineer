@@ -9,7 +9,7 @@
    - O contrato deve ser especificado usando o OpenAPI 3.0 (Swagger)
    - Deve expor um endpoint com um recurso */sobreviventes* que recebe um JSON com um array de características necessárias para escorar o modelo de Machine Learning treinado em cima do Dataset do Titanic. O modelo é disponibilizado neste repositório na seguinte *path*: */modelo/model.pkl*;
    - O método POST deve receber um JSON no body com um array de características e retornar um JSON com a probabilidade de sobrevivência do passageiro, junto com o ID do passageiro;
-     - A resposta deve ser feita numa função Lambda e **o código deve ser feito em Python**, e caso seja escolhido outro serviço AWS, justificar a escolha;
+     - O processamento - escoragem - deve ser feita numa função Lambda **com código escrito em Python**, e caso seja escolhido outro serviço AWS, justificar a escolha;
      - Além disso, a probabilidade de sobrevivência pode ser armazenada em um banco de dados de baixa latência e serverless - DynamoDB;
      - O Banco de Dados e a função Lambda devem ser criados usando IaC com Terraform, por exemplo;
      - **Não provisionar o banco DynamoDB, dado o baixo volume de requisições que serão feitas;**
